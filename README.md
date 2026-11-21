@@ -78,6 +78,38 @@ The JavaScript library build will be configured separately using Vite.
 
 Prismotive is not yet available for production use.
 
+### Library Build
+
+Prismotive uses Vite Library Mode to generate its ECMAScript module distribution.
+
+**Build the library
+
+```bash
+npm run build
+```
+
+The build performs three operations:
+
+1. Validates TypeScript source code.
+2. Generates the JavaScript distribution using Vite.
+3. Generates TypeScript declaration files.
+
+Expected distribution files:
+
+```text
+dist/
+├── index.js
+└── index.d.ts
+```
+
+Source maps may also be generated when JavaScript is emitted.
+
+The package uses ESM-only distribution. CommonJS support is not currently planned for version 1.0.0.
+
+The `dist/` directory is generated and excluded from Git.
+
+Prismotive is currently under development and its animation APIs are not yet implemented.
+
 ## Licence
 
 MIT
