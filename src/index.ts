@@ -8,4 +8,4 @@
  * their implementations are completed.
  */
 
-export { };
+export {};

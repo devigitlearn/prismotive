@@ -154,6 +154,48 @@ The initial tests verify the testing infrastructure. Animation-specific tests wi
 
 Browser compatibility testing will be expanded to Firefox and WebKit in a later milestone.
 
+### Code Quality
+
+Prismotive uses ESLint and Prettier to maintain consistent, readable and maintainable code.
+
+**Run static analysis
+
+```bash
+npm run lint
+```
+
+**Automatically fix supported lint issues
+
+```bash
+npm run lint:fix
+```
+
+**Format TypeScript source and configuration files
+
+```bash
+npm run format
+```
+
+**Verify formatting without modifying files
+
+```bash
+npm run format:check
+```
+
+Before submitting changes, contributors should run:
+
+```bash
+npm run typecheck
+npm run lint
+npm run format:check
+npm run test:all
+npm run build
+```
+
+ESLint handles code-quality analysis, Prettier handles formatting, and TypeScript provides compile-time type checking.
+
+Code-quality tools are development dependencies and are not required by consumers of the published Prismotive package.
+
 ## Licence
 
 MIT

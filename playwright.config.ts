@@ -1,27 +1,26 @@
-
 import { defineConfig, devices } from '@playwright/test';
 
 export default defineConfig({
-    testDir: './tests/browser',
+  testDir: './tests/browser',
 
-    fullyParallel: true,
+  fullyParallel: true,
 
-    forbidOnly: Boolean(process.env.CI),
+  forbidOnly: Boolean(process.env.CI),
 
-    retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 : 0,
 
-    workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 2 : undefined,
 
-    reporter: 'list',
+  reporter: 'list',
 
-    use: {
-        trace: 'retain-on-failure',
+  use: {
+    trace: 'retain-on-failure',
+  },
+
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
     },
-
-    projects: [
-        {
-            name: 'chromium',
-            use: { ...devices['Desktop Chrome'] },
-        },
-    ],
+  ],
 });
