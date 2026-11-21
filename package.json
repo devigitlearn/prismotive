@@ -15,12 +15,16 @@
     }
   },
   "sideEffects": false,
-  
   "scripts": {
     "typecheck": "tsc --project tsconfig.json",
     "build:types": "tsc --project tsconfig.build.json",
     "build:js": "vite build",
-    "build": "npm run typecheck && npm run build:js && npm run build:types"
+    "build": "npm run typecheck && npm run build:js && npm run build:types",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:browser": "playwright test",
+    "test:browser:ui": "playwright test --ui",
+    "test:all": "npm run test && npm run test:browser"
   },
   "repository": {
     "type": "git",
@@ -40,9 +44,14 @@
     "color-themes",
     "framework-agnostic"
   ],
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^26.6.6",
     "typescript": "^7.0.2",
-    "vite": "^8.3.8"
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
   }
 }

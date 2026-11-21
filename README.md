@@ -110,6 +110,50 @@ The `dist/` directory is generated and excluded from Git.
 
 Prismotive is currently under development and its animation APIs are not yet implemented.
 
+### Automated Testing
+
+Prismotive uses Vitest for unit and integration testing and Playwright for browser testing.
+
+**Run unit and integration tests
+
+```bash
+npm test
+```
+
+**Run tests in watch mode
+
+```bash
+npm run test:watch
+```
+
+**Install the Chromium testing browser
+
+```bash
+npx playwright install chromium
+```
+
+**Run browser tests
+
+```bash
+npm run test:browser
+```
+
+**Run all tests
+
+```bash
+npm run test:all
+```
+
+**Run the complete library build
+
+```bash
+npm run build
+```
+
+The initial tests verify the testing infrastructure. Animation-specific tests will be introduced as the individual engines and shared modules are implemented.
+
+Browser compatibility testing will be expanded to Firefox and WebKit in a later milestone.
+
 ## Licence
 
 MIT
