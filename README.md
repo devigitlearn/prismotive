@@ -52,3 +52,15 @@ will be added as implementation progresses.
 ## Licence
 
 MIT
+
+### Package Configuration
+
+Prismotive uses npm and follows an ESM-first architecture.
+
+The initial development version is `0.1.0`.
+
+The package is marked as private to prevent accidental npm
+publication during development.
+
+Build scripts, public entry points, and development dependencies
+will be configured in subsequent milestones.

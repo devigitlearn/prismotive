@@ -1,0 +1,27 @@
+{
+  "name": "prismotive",
+  "version": "0.1.0",
+  "description": "A lightweight, framework-independent TypeScript library for animated borders, flowing waves, and interactive cursor trails with customisable colour themes.",
+  "type": "module",
+  "private": true,
+  "license": "MIT",
+  "author": "devigitlearn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devigitlearn/prismotive.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devigitlearn/prismotive/issues"
+  },
+  "homepage": "https://github.com/devigitlearn/prismotive#readme",
+  "keywords": [
+    "animation",
+    "animated-border",
+    "wave-animation",
+    "cursor-trail",
+    "visual-effects",
+    "typescript",
+    "color-themes",
+    "framework-agnostic"
+  ]
+}
