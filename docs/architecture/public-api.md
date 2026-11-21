@@ -32,7 +32,7 @@ animatedBorder(target, options?)
 Planned configuration:
 
 | Option | Default |
-|---|---|
+| --- | --- |
 | theme | rainbow |
 | duration | 4000 ms |
 | thickness | 2 px |
@@ -50,7 +50,7 @@ animatedWave(target, options?)
 Planned configuration:
 
 | Option | Default |
-|---|---|
+| --- | --- |
 | theme | rainbow |
 | amplitude | 30 px |
 | frequency | 1 |
@@ -68,7 +68,7 @@ cursorTrail(target, options?)
 Planned configuration:
 
 | Option | Default |
-|---|---|
+| --- | --- |
 | theme | rainbow |
 | length | 50 particles |
 | particleSize | 6 px |
@@ -170,3 +170,27 @@ Planned:
 
 `createTheme()` currently uses native exceptions for invalid
 inputs. Integration with structured Prismotive errors is planned.
+
+### Theme Resolution
+
+**Implementation status: Implemented internally
+
+Prismotive uses an internal `resolveTheme()` function to convert built-in theme names or custom theme objects into validated, immutable palettes.
+
+Supported built-in themes:
+
+- `rainbow`
+- `ocean`
+- `sunset`
+- `aurora`
+- `gold`
+
+A built-in preset resolves to its existing immutable theme object.
+
+Custom themes are validated through `createTheme()`. Valid immutable and normalised themes retain their references; mutable themes are copied and frozen.
+
+Unknown preset names, malformed theme objects and invalid colour values are rejected.
+
+`resolveTheme()` is an internal implementation utility and is not exported from the public package entry point.
+
+Structured Prismotive error codes will be integrated in a subsequent core development step.

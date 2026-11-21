@@ -242,6 +242,14 @@ The returned theme object and its colour array are immutable.
 
 **Implementation status:** Custom theme creation and built-in palette definitions are implemented. Theme-name resolution and integration with animated borders, waves and cursor trails are planned for subsequent milestones.
 
+Built-in theme names and custom theme objects are resolved
+internally into immutable colour palettes.
+
+Theme resolution is implemented but is not part of the
+public package API.
+
+Animation engine integration remains under development.
+
 ## Project Documentation
 
 Prismotive's technical documentation is maintained in the `docs/`

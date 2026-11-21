@@ -45,17 +45,29 @@ The theme engine will provide:
 - Theme resolution
 - Immutable theme objects
 
+### Theme Resolution
+
+The internal theme resolver accepts built-in preset names and custom theme objects.
+
+Preset names resolve to shared immutable palette objects.
+
+Custom themes are validated and normalised using createTheme().
+
+The resolver preserves valid immutable references where safe and creates immutable copies of mutable inputs.
+
+Invalid themes are rejected rather than silently replaced with a default palette.
+
 ### Animation Engines
 
-**Border engine**
+**Border engine
 
 Uses CSS-based gradient animation.
 
-**Wave engine**
+**Wave engine
 
 Uses Canvas 2D and mathematical wave calculations.
 
-**Cursor trail engine**
+**Cursor trail engine
 
 Uses Canvas 2D, pointer events, and bounded particles.
 
