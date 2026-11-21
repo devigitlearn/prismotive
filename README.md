@@ -212,6 +212,36 @@ publication during development.
 Build scripts, public entry points, and development dependencies
 will be configured in subsequent milestones.
 
+## Theme System
+
+Prismotive provides five built-in colour theme presets:
+
+- Rainbow
+- Ocean
+- Sunset
+- Aurora
+- Gold
+
+The `createTheme()` function allows developers to create custom, immutable colour palettes.
+
+```typescript
+import { createTheme } from 'prismotive';
+
+const customTheme = createTheme({
+  colors: ['#FF0080', '#7928CA', '#00D4FF'],
+});
+```
+
+Custom themes currently support `#RGB` and `#RRGGBB` hexadecimal colours.
+
+Colour values are normalised to uppercase six-digit hexadecimal strings.
+
+Themes must contain between 2 and 32 colours.
+
+The returned theme object and its colour array are immutable.
+
+**Implementation status:** Custom theme creation and built-in palette definitions are implemented. Theme-name resolution and integration with animated borders, waves and cursor trails are planned for subsequent milestones.
+
 ## Project Documentation
 
 Prismotive's technical documentation is maintained in the `docs/`

@@ -3,9 +3,8 @@
  * Colour in motion.
  *
  * Public API entry point.
- *
- * Animation functions will be exported as
- * their implementations are completed.
  */
 
-export {};
+export { createTheme } from './themes/create-theme.js';
+
+export type { Theme, ThemeInput, ThemeOptions, ThemePreset } from './themes/types.js';

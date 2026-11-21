@@ -151,3 +151,22 @@ Asynchronous rendering failures will use the `onError` callback.
 These APIs are planned and are not exported by the current package.
 
 Examples are specifications, not executable usage instructions.
+
+## Implementation Status
+
+Implemented:
+
+- `createTheme()` — custom theme validation and creation
+- Five internal, immutable built-in palettes
+
+Planned:
+
+- Built-in theme-name resolution
+- `animatedBorder()`
+- `animatedWave()`
+- `cursorTrail()`
+- Animation lifecycle controls
+- Structured Prismotive error codes
+
+`createTheme()` currently uses native exceptions for invalid
+inputs. Integration with structured Prismotive errors is planned.
