@@ -6,6 +6,10 @@
   "private": true,
   "license": "MIT",
   "author": "devigitlearn",
+  "scripts": {
+  "typecheck": "tsc --project tsconfig.json",
+  "build:types": "tsc --project tsconfig.build.json"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/devigitlearn/prismotive.git"
@@ -23,5 +27,8 @@
     "typescript",
     "color-themes",
     "framework-agnostic"
-  ]
+  ],
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
 }

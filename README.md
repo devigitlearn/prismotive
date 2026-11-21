@@ -2,9 +2,7 @@
 
 **Colour in motion.**
 
-Prismotive is a lightweight, framework-independent
-TypeScript library for animated borders, flowing waves,
-and interactive cursor trails with customisable colour themes.
+Prismotive is a lightweight, framework-independent TypeScript library for animated borders, flowing waves, and interactive cursor trails with customisable colour themes.
 
 ## Project Status
 
@@ -43,11 +41,42 @@ The package is not yet available for production use.
 
 ## Development
 
-The project is currently in the repository
-initialisation phase.
+The project is currently in the repository initialisation phase.
 
-Installation instructions and API documentation
-will be added as implementation progresses.
+Installation instructions and API documentation will be added as implementation progresses.
+
+### TypeScript Development
+
+Prismotive is developed using TypeScript with strict type checking.
+
+**Prerequisites
+
+- Node.js 24.x or a compatible supported version
+- npm
+
+**Install development dependencies
+
+```bash
+npm install
+```
+
+**Run TypeScript validation
+
+```bash
+npm run typecheck
+```
+
+**Generate TypeScript declaration files
+
+```bash
+npm run build:types
+```
+
+TypeScript declaration files are generated in `dist/`, which is excluded from Git.
+
+The JavaScript library build will be configured separately using Vite.
+
+Prismotive is not yet available for production use.
 
 ## Licence
 
