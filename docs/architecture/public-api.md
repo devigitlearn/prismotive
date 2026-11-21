@@ -194,3 +194,20 @@ Unknown preset names, malformed theme objects and invalid colour values are reje
 `resolveTheme()` is an internal implementation utility and is not exported from the public package entry point.
 
 Structured Prismotive error codes will be integrated in a subsequent core development step.
+
+### Animation Target Contract
+
+```typescript
+type AnimationTarget = string | HTMLElement;
+```
+
+Animation functions will accept either a CSS selector or an
+existing HTML element.
+
+Each animation instance targets one element.
+
+The internal resolver validates the target before animation
+resources are allocated.
+
+Target resolution is implemented internally. Public animation
+functions are not yet implemented.

@@ -36,6 +36,28 @@ The shared core will manage:
 - Error handling
 - Animation scheduling
 
+### Animation Target Resolution
+
+The internal `resolveTarget()` utility converts a CSS selector
+or existing HTMLElement into a validated target element.
+
+Supported behaviour:
+
+- CSS ID, class and other valid selectors
+- First matching HTML element
+- Existing HTML element references
+- Current-document targets
+
+Invalid selectors, missing elements, unsupported element types
+and detached targets are rejected.
+
+The resolver does not modify the DOM.
+
+Module imports are safe in Node.js environments. Resolving a
+target requires a browser environment.
+
+Structured error integration is planned for Step 5.4.
+
 ### Theme Engine
 
 The theme engine will provide:

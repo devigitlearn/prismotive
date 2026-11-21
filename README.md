@@ -196,6 +196,23 @@ ESLint handles code-quality analysis, Prettier handles formatting, and TypeScrip
 
 Code-quality tools are development dependencies and are not required by consumers of the published Prismotive package.
 
+### Animation Target Contract
+
+```typescript
+type AnimationTarget = string | HTMLElement;
+```
+
+Animation functions will accept either a CSS selector or an
+existing HTML element.
+
+Each animation instance targets one element.
+
+The internal resolver validates the target before animation
+resources are allocated.
+
+Target resolution is implemented internally. Public animation
+functions are not yet implemented.
+
 ## Licence
 
 MIT
