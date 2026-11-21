@@ -211,3 +211,27 @@ publication during development.
 
 Build scripts, public entry points, and development dependencies
 will be configured in subsequent milestones.
+
+## Project Documentation
+
+Prismotive's technical documentation is maintained in the `docs/`
+directory.
+
+- [Product Specification](docs/requirements/product-specification.md)
+- [Architecture Overview](docs/architecture/overview.md)
+- [Public API Specification](docs/architecture/public-api.md)
+- [Architecture Decision Records](docs/adr/README.md)
+
+## Contributing
+
+Contributions and suggestions are welcome.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development guidelines.
+
+## Security
+
+See [SECURITY.md](SECURITY.md) for vulnerability reporting guidance.
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for project changes and release notes.
